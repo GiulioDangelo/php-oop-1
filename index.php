@@ -2,11 +2,13 @@
 include __DIR__ . '/movie.php';
 
 $films=[
-$avatar = new Movie('Avatar', 'James','Cameron', 2009, ['Action', 'Sci-Fi']),
+$avatar = new Movie('Avatar', 'James','Cameron', 2009, ['Action', 'Sci-Fi','Adventure']),
 
 $fast = new Movie('Fast and Furious', 'Rob','Cohen', 2001, ['Action', 'Crime']),
 
 $pirates = new Movie('Pirates of the Caribbean', 'Gore','Verbinski', 2003, ['Action', 'Adventure']),
+
+$avengers = new Movie('Avengers', 'Joss','Whedon', 2012, ['Action', 'Adventure']),
 ]
 ?>
 
@@ -20,6 +22,8 @@ $pirates = new Movie('Pirates of the Caribbean', 'Gore','Verbinski', 2003, ['Act
 <style>
     li{
         margin: 20px 0;
+        border-bottom: 1px solid black;
+        list-style: none;
     }
 </style>
 <body>
