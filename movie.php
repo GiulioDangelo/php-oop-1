@@ -4,20 +4,15 @@ class Movie {
     public $directorName;
     public $directorSurname;
     public $year;
-    public array $genre;
+    public $genre;
 
-     public function __construct($title, $directorName,$directorSurname, $year, /*Genre $genre*/ array $genre)
+    public function __construct($title, $directorName,$directorSurname, $year, Genre $genre)
     {
         $this->title = $title;
         $this->directorName = $directorName;
         $this->directorSurname = $directorSurname;
         $this->year = $year;
-        $this->$genre = [
-            new Genre('horror'),
-            new Genre('comedy'),
-            new Genre('action'),
-            new Genre('drama')
-        ];
+        $this->genre = $genre;
     }
     
     public function getFullName()
@@ -27,14 +22,11 @@ class Movie {
 
 }
 
-    // class Genre {
-    //     public array $type;
-    
-    //     public function __construct($type)
-    //     {
-    //         $this->type = $type;
-    //     }
-    // }
+class Genre {
+    public array $type;
 
-
-    
+    public function __construct($type)
+    {
+        $this->type = $type;
+    }
+}

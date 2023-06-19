@@ -10,6 +10,14 @@ $pirates = new Movie('Pirates of the Caribbean', 'Gore','Verbinski', 2003, new G
 
 $avengers = new Movie('Avengers', 'Joss','Whedon', 2012, new Genre (['Action', 'Adventure'])),
 ]
+
+// $genre = [
+//     new Genre('horror'),
+//     new Genre('comedy'),
+//     new Genre('action'),
+//     new Genre('drama')
+// ];
+
 ?>
 
 <!DOCTYPE html>
