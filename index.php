@@ -2,13 +2,13 @@
 include __DIR__ . '/movie.php';
 
 $films=[
-$avatar = new Movie('Avatar', 'James','Cameron', 2009, ['Action', 'Sci-Fi','Adventure']),
+$avatar = new Movie('Avatar', 'James','Cameron', 2009,new Genre(['Action', 'Sci-Fi','Adventure']) ),
 
-$fast = new Movie('Fast and Furious', 'Rob','Cohen', 2001, ['Action', 'Crime']),
+$fast = new Movie('Fast and Furious', 'Rob','Cohen', 2001, new Genre(['Action', 'Crime'])),
 
-$pirates = new Movie('Pirates of the Caribbean', 'Gore','Verbinski', 2003, ['Action', 'Adventure']),
+$pirates = new Movie('Pirates of the Caribbean', 'Gore','Verbinski', 2003, new Genre (['Action', 'Adventure'])),
 
-$avengers = new Movie('Avengers', 'Joss','Whedon', 2012, ['Action', 'Adventure']),
+$avengers = new Movie('Avengers', 'Joss','Whedon', 2012, new Genre (['Action', 'Adventure'])),
 ]
 ?>
 
@@ -29,7 +29,7 @@ $avengers = new Movie('Avengers', 'Joss','Whedon', 2012, ['Action', 'Adventure']
 <body>
     <ul><?php
         foreach($films as $film) { ?>
-        <li><?= $film->title . '<br>' . $film->getFullName(). '<br>' . $film->year . '<br>' . implode(', ', $film->genre)?></li><?php
+        <li><?= $film->title . '<br>' . $film->getFullName(). '<br>' . $film->year . '<br>' . implode(', ', $film->genre->type)?></li><?php
         }?>
     </ul>
 </body>
